@@ -53,15 +53,17 @@ bool JoystickController::queue_Data_Transfer_Debug(Pipe_t *pipe, void *buffer,
 // The others are used after claim-hid code to know which one we have and to use it for
 // doing other features.
 JoystickController::product_vendor_mapping_t JoystickController::pid_vid_mapping[] = {
-    { 0x045e, 0x02ea, XBOXONE, false }, { 0x045e, 0x02dd, XBOXONE, false },
-    { 0x045e, 0x0719, XBOX360, false},
-    { 0x045e, 0x028E, SWITCH, false},  // Switch?
-    { 0x054C, 0x0268, PS3, true},
-    { 0x054C, 0x042F, PS3, true},   // PS3 Navigation controller
-    { 0x054C, 0x03D5, PS3_MOTION, true},    // PS3 Motion controller
-    { 0x054C, 0x05C4, PS4, true},   {0x054C, 0x09CC, PS4, true },
-    { 0x046D, 0xC626, SpaceNav, true},  // 3d Connextion Space Navigator, 0x10008
-    { 0x046D, 0xC628, SpaceNav, true}  // 3d Connextion Space Navigator, 0x10008
+	{ 0x045e, 0x02dd, XBOXONE, false },  // Xbox One Controller
+	{ 0x045e, 0x02ea, XBOXONE, false },  // Xbox One S Controller
+	{ 0x045e, 0x0b12, XBOXONE, false },  // Xbox Core Controller (Series S/X)
+	{ 0x045e, 0x0719, XBOX360, false},
+	{ 0x045e, 0x028E, SWITCH, false},  // Switch? 
+	{ 0x054C, 0x0268, PS3, true}, 
+	{ 0x054C, 0x042F, PS3, true},   // PS3 Navigation controller
+	{ 0x054C, 0x03D5, PS3_MOTION, true},   // PS3 Motion controller
+	{ 0x054C, 0x05C4, PS4, true},   {0x054C, 0x09CC, PS4, true },
+	{ 0x046D, 0xC626, SpaceNav, true},  // 3d Connextion Space Navigator, 0x10008
+	{ 0x046D, 0xC628, SpaceNav, true}  // 3d Connextion Space Navigator, 0x10008
 };
 
 
